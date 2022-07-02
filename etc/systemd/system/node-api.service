@@ -1,0 +1,13 @@
+[Unit]
+Description=Nodejs hello world App
+Documentation=https://example.com
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/node /home/ubuntu/Code/typescript-express/dist/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
